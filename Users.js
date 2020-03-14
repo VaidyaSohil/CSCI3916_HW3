@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 var bcrypt = require('bcrypt-nodejs');
-
+//TODO: Review mongoose.js
 mongoose.Promise = global.Promise;
 
 mongoose.connect(process.env.DB, { useNewUrlParser: true } );
