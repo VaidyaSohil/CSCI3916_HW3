@@ -200,10 +200,5 @@ router.route('/movies')
         }
     )
 
-
-router.all('*', function(req, res) {
-    res.status(405).send({success: false, msg: 'Method Not Allowed'});
-});
-
 app.use('/', router);
 app.listen(process.env.PORT || 8080);

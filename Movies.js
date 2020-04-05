@@ -15,12 +15,8 @@ var MovieSchema = new Schema({
     genre: {
         type: String, required: true, enum: ["Action", "Adventure", "Comedy", "Drama", "Fantasy", "Horror", "Mystery", "Thriller", "Western"]
     },
-    actors: {type: [String], required: true, validate: [arrayLimit, '{PATH} array must be of size 3']}
+    actors: {type: [String], required: true, validate: [(val)=> val.length==3, '{PATH} array must be of size 3']}
 });
-
-function arrayLimit(val) {
-    return val.length == 3;
-}
 
 
 // return the model
